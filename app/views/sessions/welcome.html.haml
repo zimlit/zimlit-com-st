@@ -1,9 +1,9 @@
-%div{:id => "home"}
-  %h1{ :class => "welcome"}
-    Zimlit.com
-    %p coding, cubing, conlanging, conworlding
+%h1 welcome
+
 - if logged_in?
   %h1 
+    you are logged in 
+    = current_user.username
     = button_to "Logout", '/logout', method: :delete
 - if !logged_in?
   = button_to "Login", '/login', method: :get
