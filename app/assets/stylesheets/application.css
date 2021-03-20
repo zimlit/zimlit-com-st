@@ -47,10 +47,27 @@ a {
 }
 
 a:active {
-  text-decoration
+  text-decoration: underline;
+}
 
 ul {
   list-style: none;
   text-align: center;
   padding: 0em;
 }
+
+
+.sect {
+  background: #555;
+  margin: 2em 1em;
+  padding: .5em .5em 10em;
+  border-radius: 25px;
+}
+
+.label {
+  text-align: center;
+  text-decoration: underline;
+  color: #575;
+  margin-bottom: 2em;
+}
+
