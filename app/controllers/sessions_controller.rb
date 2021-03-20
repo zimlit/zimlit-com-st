@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :authorized, only: [:new, :create, :login_req]
   def new
   end
 
@@ -20,5 +21,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to "/"
+  end
+  def login_req
   end
 end

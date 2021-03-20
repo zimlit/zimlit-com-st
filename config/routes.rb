@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'coding', to: "coding#index"
   get 'home', to: "home#index"
   delete 'logout', to: "sessions#destroy"
+  get '/login_req', to: "sessions#login_req"
   root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
