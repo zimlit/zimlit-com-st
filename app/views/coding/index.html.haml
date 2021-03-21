@@ -18,6 +18,6 @@
               = f.hidden_field "id", value: project.id
               = f.hidden_field "author_id", value: project.author_id
               = f.submit 'delete'
-      
-    %a{:href => "/projects/new", :class => "new"}
-      new project
+    %div{:class => "new"}  
+      %a{:href => "/projects/new"}
+        new project
