@@ -1,20 +1,20 @@
-%div{:id => "coding"}
-  %div{:class => "sect"}
-    %h1{:class => "label"}
+%div{id: "coding"}
+  %div{class: "sect"}
+    %h1{class: "label"}
       projects
     %ul
       - @projects.each do |project|
         %li
-          %a{:href => project.url}
+          %a{href: project.url}
             = project.title
           %br
           by:
           = User.find_by(id: project.author_id).username 
           - if current_user&.id == project.author_id
-            = form_with :url => '/projects/destroy' do |f|
+            = form_with url: '/projects/destroy' do |f|
               = f.hidden_field "id", value: project.id
               = f.hidden_field "author_id", value: project.author_id
               = f.submit 'delete'
-    %div{:class => "new"}  
-      %a{:href => "/projects/new"}
+    %div{class: "new"}  
+      %a{href: "/projects/new"}
         new project

@@ -60,7 +60,7 @@ ul {
 .sect {
   background: #555;
   margin: 2em 1em;
-  padding: .5em .5em 10em;
+  padding: .5em .5em 3em;
   border-radius: 25px;
 }
 
@@ -75,4 +75,101 @@ form {
   display: flex;
   justify-content: center;
   margin-top: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+/*
+.flex_input {
+  margin-bottom: 1em;
+  padding: 1em 0.5em 1em 0.5em;
+  min-width: 30em;
+}
+*/
+
+.flex_input {
+  margin-bottom: 1em;
+  padding: 1em 0.5em 1em 0.5em;
+  min-width: 95%;
+}
+
+.flex_input_fill {
+  margin-bottom: 1em;
+  padding: 1em 0.5em 1em 0.5em;
+  min-width: 99.3%;
+}
+
+.flex_tall_input {
+  margin-bottom: 1em;
+  padding: 1em 0.5em 1em 0.5em;
+  min-width: 95%;
+  min-height: 25em;
+  align-items: start;
+  display: flex;
+  background: #555;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+
+.flex_tall_input_fill {
+  margin-bottom: 1em;
+  padding: 1em 0.5em 1em 0.5em;
+  min-width: 99%;
+  min-height: 25em;
+  align-items: start;
+  display: flex;
+  background: #555;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.submit {
+  margin-bottom: 1em;
+  padding: 1em 0.7em 1em 0.7em;
+  min-width: 95.7%;
+}
+
+.header {
+  text-align: center
+}
+
+.is-hidden {
+  visibility: hidden;
+}
+
+.tab-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+}
+
+.tab-li {
+  margin: 0em;
+  border-color: grey;
+  border-width: 2px;
+  border-style: solid;
+  width: 33.3%;
+}
+
+.tab-li-cont {
+  width: 96%;
+}
+
+.tab-cont {
+  position: relative;
+}
+
+.tab {
+  position: absolute;
+  top: 1em;
+  left: 0em;
+  min-width: 100%;
+}
+
+.is-active {
+  border-color: #369;
+  border-width: 2px;
+  border-style: solid;
 }

@@ -1,0 +1,7 @@
+const IO = require "IO"
+
+let greet(name, greeting): (string, string) -> Nil =
+  IO.print("$(greeting) $(name).")
+
+let entry -> Nil =
+  greet("world", "hello") 
