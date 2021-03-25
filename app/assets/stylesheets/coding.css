@@ -1,18 +1,16 @@
-  .github {
-    background: #555;
-    text-align: center;
-    margin: 1em;
-    border-radius: 25px;
-    padding: 1em;
-  }
+#coding {
+  display: grid;
+}
 
   li {
     display: block;
     background-color: grey;
-    margin: 0em 5em 2em 5em;
     padding: 1em;
     border-radius: 5px;
     text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 23;
+    margin-bottom: 1em;
   }
 
   li:hover {
@@ -22,6 +20,7 @@
   ul {
     text-align: center;
     padding: 1em;
+    display: grid;
   }
 
   .new {

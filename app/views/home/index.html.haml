@@ -1,10 +1,12 @@
 %div{id: "home"}
-  %h1{class: "welcome"}
+  %h1{class: "welcome fill"}
     Zimlit.com
     %p coding, cubing, conlanging, conworlding
-- if logged_in?
-  %h1 
-    = button_to "Logout", '/logout', method: :delete
-- if !logged_in?
-  = button_to "Login", '/login', method: :get
-  = button_to "Sign Up", '/users/new', method: :get
+  - if logged_in?
+    %div{class: "fill"}
+      = button_to "Logout", '/logout', method: :delete, class: "span submit"
+  - if !logged_in?
+    %div{class: "fill"}
+      = button_to "Login", '/login', method: :get, class: "span submit"
+    %div{class: "fill"}
+      = button_to "Sign Up", '/users/new', method: :get, class: "span submit"

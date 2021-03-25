@@ -7,7 +7,11 @@ export default class extends Controller {
   }
 
   change(e) {
-    this.index = this.tabTargets.indexOf(e.target)
+    if (e.path.length == 9) {
+      this.index = this.tabTargets.indexOf(e.target)
+    } else {
+      this.index = this.tabTargets.indexOf(e.path[1])
+    }
     this.showTab(this.index)
   }
 

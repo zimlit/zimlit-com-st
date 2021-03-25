@@ -1,6 +1,7 @@
-%h1{class: "header"} New project
+%div{id: "projects"}
+  %h1{class: "header span", style: "display: block"} New project
 
-= form_with model: @project do |f|
-  = f.text_field :title, class: 'flex_input', placeholder: "title"  
-  = f.text_field :url, class: 'flex_input', placeholder: "url"
-  = f.submit class: 'submit' 
+  = form_with class: "span", model: @project do |f|
+    = f.text_field :title, class: 'flex_input fill', style: "grid-row-start: 1; display: block;",  placeholder: "title"  
+    = f.text_field :url, class: 'flex_input fill', placeholder: "url"
+    = f.submit class: 'submit fill' 

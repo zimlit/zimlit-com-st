@@ -14,19 +14,23 @@
  *= require_self
  */
 #nav {
-  margin: 1em;
-  border-radius: 25px;
-  background: #555;
   font-size: 2vw;
-  size: 50%;
+  display: grid;
+}
+
+.span {
+  grid-column-start: 2;
+  grid-column-end: 23;
+  border-radius: 5px;
+  display: grid;
 }
   
 .nav-item {
   margin: 0.5em 1em 0.5em 1em;
   background: gray;
-  display: inline-block;
   padding: 0.5em 1em 0.5em 1em;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .nav-item:hover {
@@ -35,10 +39,12 @@
 
 body {
   background: #333;
+  margin: 0em;
 }
 
 * {
   font-family: 'roboto', sans-serif;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 a {
@@ -59,24 +65,18 @@ ul {
 
 .sect {
   background: #555;
-  margin: 2em 1em;
   padding: .5em .5em 3em;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 .label {
   text-align: center;
   text-decoration: underline;
   color: #575;
-  margin-bottom: 2em;
 }
 
 form {
-  display: flex;
-  justify-content: center;
   margin-top: 1em;
-  flex-direction: column;
-  align-items: center;
 }
 /*
 .flex_input {
@@ -89,13 +89,6 @@ form {
 .flex_input {
   margin-bottom: 1em;
   padding: 1em 0.5em 1em 0.5em;
-  min-width: 95%;
-}
-
-.flex_input_fill {
-  margin-bottom: 1em;
-  padding: 1em 0.5em 1em 0.5em;
-  min-width: 99.3%;
 }
 
 .flex_tall_input {
@@ -111,24 +104,9 @@ form {
   resize: none;
 }
 
-
-.flex_tall_input_fill {
-  margin-bottom: 1em;
-  padding: 1em 0.5em 1em 0.5em;
-  min-width: 99%;
-  min-height: 25em;
-  align-items: start;
-  display: flex;
-  background: #555;
-  border: none;
-  border-radius: 5px;
-  resize: none;
-}
-
 .submit {
   margin-bottom: 1em;
   padding: 1em 0.7em 1em 0.7em;
-  min-width: 95.7%;
 }
 
 .header {
@@ -150,11 +128,7 @@ form {
   border-color: grey;
   border-width: 2px;
   border-style: solid;
-  width: 33.3%;
-}
-
-.tab-li-cont {
-  width: 96%;
+  width: 33%;
 }
 
 .tab-cont {
@@ -172,4 +146,18 @@ form {
   border-color: #369;
   border-width: 2px;
   border-style: solid;
+}
+
+.tab-label {
+  color: #369;
+  font-weight: normal;
+  margin: 0em;
+}
+
+.fill {
+  grid-column-start: 1;
+  grid-column-end: 24;
+}
+.button_to {
+  display: grid;
 }

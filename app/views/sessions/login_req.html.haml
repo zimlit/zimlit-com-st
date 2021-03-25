@@ -1,3 +1,6 @@
-%h1{class: "header"} you need to log in to view this page
-= button_to "Login", '/login', method: :get
-= button_to "Sign Up", '/users/new', method: :get
+%div{id: "sessions"}
+  %h1{class: "header span", style: "display: block"} you need to log in to view this page
+  %div{class: "span", style: "display: block"}
+    = button_to "Login", '/login', method: :get
+  %div{class: "span", style: "display: block"}
+    = button_to "Sign Up", '/users/new', method: :get

@@ -7,3 +7,7 @@ input {
   border: transparent;
   border-radius: 5px;
 }
+
+#home {
+  display: grid;
+}

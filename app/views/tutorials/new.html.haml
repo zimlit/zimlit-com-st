@@ -1,23 +1,28 @@
-= form_with do |f|
-  = f.text_field :title, placeholder: "title", class: "flex_input"
-  %div{'data-controller': "tabs", 'data-tabs-index': '0', class: "tab-li-cont"}
-    %ul{class: "tab-list"}
-      %li{'data-target': 'tabs.tab', 'data-action': 'click->tabs#change', class: 'is-active tab-li'}
-        %a
-          overview
-      %li{'data-target': 'tabs.tab', 'data-action': 'click->tabs#change', class: 'tab-li'}
-        %a
-          stats
-      %li{'data-target': 'tabs.tab', 'data-action': 'click->tabs#change', class: 'tab-li'}
-        %a
-          main body
+%div{id: "tutorials"}
+  = form_with class: "span", model: @tutorial do |f|
+    = f.text_field :title, placeholder: "title", class: "flex_input span"
+    %div{'data-controller': "tabs", 'data-tabs-index': '0', class: "tab-li-cont span"}
+      %ul{class: "tab-list fill"}
+        %li{'data-tabs-target': 'tab', 'data-action': 'click->tabs#change', class: 'is-active tab-li'}
+          %h4{class: 'tab-label'}
+            overview
+        %li{'data-tabs-target': 'tab', 'data-action': 'click->tabs#change', class: 'tab-li'}
+          %h4{class: 'tab-label'}
+            stats
+        %li{'data-tabs-target': 'tab', 'data-action': 'click->tabs#change', class: 'tab-li'}
+          %h4{class: 'tab-label'}
+            main body
 
-    %div{class: "tab-cont"}
-      %div{class: "tab box", "data-target": "tabs.tabPanel"}
-        = f.text_field :purpose, class: 'flex_input_fill', placeholder: 'purpose/main idea'
-        = f.text_area :steps, class: 'flex_tall_input_fill', placeholder: 'steps'
-      %div{class: "tab box is-hidden", "data-target": "tabs.tabPanel"}
-        panel 2
-      %div{class: "tab box is-hidden", "data-target": "tabs.tabPanel"}
-        panel 3
-
+      %div{class: "tab-cont fill"}
+        %div{class: "tab box", style: "display: grid", "data-tabs-target": "tabPanel"}
+          = f.text_field :purpose, class: 'flex_input fill', placeholder: 'purpose/main idea'
+          = f.text_area :steps, class: 'flex_tall_input fill', placeholder: 'steps'
+          = f.submit 'create tutorial', class: 'submit fill'
+        %div{class: "tab box is-hidden", style: "display: grid", "data-tabs-target": "tabPanel"} 
+          = f.text_field :proposer, class: 'flex_input fill', placeholder: 'proposer'
+          = f.text_field :proposed, class: 'flex_input fill', placeholder: 'proposed'
+          = f.text_field :move_count, class: 'flex_input fill', placeholder: 'movecount'
+          = f.submit 'create tutorial', class: 'submit fill'
+        %div{class: "tab box is-hidden", style: "display: grid", "data-tabs-target": "tabPanel"}
+          = f.text_area :tutorial, class: 'flex_tall_input fill', placeholder: 'detailed tutorial for steps'
+          = f.submit 'create tutorial', class: 'submit fill'

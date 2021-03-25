@@ -1,6 +1,7 @@
-%h1{class: "header"} Sign Up
+%div{id: "users"}
+  %h1{class: "header span", style: "display: block"} Sign Up
 
-= form_with model: @user do |f|
-  = f.text_field :username, class: 'flex_input', placeholder: "username"
-  = f.password_field :password, class: 'flex_input', placeholder: "password"
-  = f.submit class: 'submit'
+  = form_with class: "span", model: @user do |f|
+    = f.text_field :username, class: 'flex_input fill', placeholder: "username"
+    = f.password_field :password, class: 'flex_input fill', placeholder: "password"
+    = f.submit class: 'submit fill'

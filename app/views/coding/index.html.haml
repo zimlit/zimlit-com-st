@@ -1,8 +1,8 @@
 %div{id: "coding"}
-  %div{class: "sect"}
-    %h1{class: "label"}
+  %div{class: "sect span"}
+    %h1{class: "label span", style: "display: block"}
       projects
-    %ul
+    %ul{class: "span", style: "grid-row-start: 2;"}
       - @projects.each do |project|
         %li
           %a{href: project.url}
@@ -15,6 +15,6 @@
               = f.hidden_field "id", value: project.id
               = f.hidden_field "author_id", value: project.author_id
               = f.submit 'delete'
-    %div{class: "new"}  
+    %div{class: "new span", style: "display: block"}  
       %a{href: "/projects/new"}
         new project

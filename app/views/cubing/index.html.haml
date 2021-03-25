@@ -1,10 +1,10 @@
 %div{id: "cubing"}
-  %div{class: "sect"}
-    %h1{class: "label"}
+  %div{class: "sect span"}
+    %h1{class: "label span", style: "display: block"}
       tutorials
-    %ul
+    %ul{class: "span", style: "grid-row-start: 2;"}
       - @tutorials.each do |tutorial|
         %li
-    %div{class: "new"}  
+    %div{class: "new span", style: "display: block"}  
       %a{href: "/tutorials/new"}
         new tutorial
